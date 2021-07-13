@@ -1,0 +1,188 @@
+@charset "UTF-8";
+ul,
+li {
+  list-style-type: none;
+  /* 拿掉前方圈圈 */
+  margin: 0;
+  padding: 0;
+}
+
+.bg-gray {
+  background: #3e414f;
+  color: #efefef;
+}
+
+.bg-lightgray {
+  background: #efefef;
+  color: #000;
+}
+
+.bg-orange {
+  background: #f2af44;
+  color: #efefef;
+}
+
+.bg-red {
+  background: #cb5c5c;
+  color: #efefef;
+}
+
+.my-btn {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  line-height: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "微軟正黑體";
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-red {
+  color: black;
+  background-color: #f2af44;
+}
+.btn-red:hover {
+  background-color: #f5c374;
+  color: black;
+}
+.btn-red:active {
+  top: 1px;
+  position: relative;
+}
+
+.btn-red-w {
+  color: #efefef;
+  background-color: #f2af44;
+}
+.btn-red-w:hover {
+  background-color: #f5c374;
+  color: #efefef;
+}
+.btn-red-w:active {
+  top: 1px;
+  position: relative;
+}
+
+.btn-gray {
+  color: black;
+  background-color: #efefef;
+}
+.btn-gray:hover {
+  background-color: white;
+  color: black;
+}
+.btn-gray:active {
+  top: 1px;
+  position: relative;
+}
+
+.btn-outline-red {
+  color: #efefef;
+  background-color: #cb5c5c;
+  border: 1px solid #c4c4c4;
+}
+.btn-outline-red:hover {
+  color: #efefef;
+  background-color: #d78383;
+}
+.btn-outline-red:active {
+  top: 1px;
+  position: relative;
+}
+
+.btn-outline-gray {
+  color: #3e414f;
+  background-color: #efefef;
+  border: 1px solid #3e414f;
+}
+.btn-outline-gray:hover {
+  color: #3e414f;
+  background-color: white;
+}
+.btn-outline-gray:active {
+  top: 1px;
+  position: relative;
+}
+
+.logo a {
+  display: block;
+  width: 260px;
+  height: 100px;
+  background: url(https://fakeimg.pl/120x60/?retina=1&text=公司logo&font=noto);
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.phone-box {
+  width: 100%;
+  color: #c4c4c4;
+  height: 60px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: 2px;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.type-wrap {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 85px 85px 85px;
+  grid-auto-rows: 85px;
+  grid-gap: 2px;
+}
+
+.type-item {
+  background: #3e414f;
+  color: #c4c4c4;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 85px;
+  cursor: pointer;
+}
+.type-item:nth-child(10) {
+  background: #cb5c5c;
+}
+
+.btn-warp {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.info-list li {
+  color: #3e414f;
+  line-height: 16px;
+}
+.info-list li h5 {
+  font-weight: 500;
+  font-size: 18px;
+}
+.info-list li p {
+  font-size: 16px;
+}
+
+.note p {
+  color: #c4c4c4;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 16px;
+  line-height: 36px;
+  width: 280px;
+  color: #f2af44;
+  border-bottom: 5px solid #f2af44;
+}
+
+.time-warp p {
+  font-size: 16px;
+  line-height: 4px;
+}
+
+/*# sourceMappingURL=all.css.map */
