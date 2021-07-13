@@ -94,6 +94,7 @@ li {
   color: $lightgrey;
   background-color: $drvet_red;
   border: 1px solid #c4c4c4;
+  margin: -1px;
   &:hover {
     color: $lightgrey;
     background-color: lighten($drvet_red, 10%);
@@ -160,11 +161,6 @@ li {
   }
 }
 
-.btn-warp {
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
 .info-list li {
   color: $drVet_blue;
   line-height: 16px;
@@ -194,4 +190,8 @@ li {
 .time-warp p {
   font-size: 16px;
   line-height: 4px;
+}
+
+.btn-warp a {
+  margin: 10px;
 }

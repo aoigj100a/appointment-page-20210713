@@ -85,6 +85,7 @@ li {
   color: #efefef;
   background-color: #cb5c5c;
   border: 1px solid #c4c4c4;
+  margin: -1px;
 }
 .btn-outline-red:hover {
   color: #efefef;
@@ -149,11 +150,6 @@ li {
   background: #cb5c5c;
 }
 
-.btn-warp {
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
 .info-list li {
   color: #3e414f;
   line-height: 16px;
@@ -183,6 +179,10 @@ li {
 .time-warp p {
   font-size: 16px;
   line-height: 4px;
+}
+
+.btn-warp a {
+  margin: 10px;
 }
 
 /*# sourceMappingURL=all.css.map */
