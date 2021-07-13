@@ -1,4 +1,4 @@
-# appointment-page-20210714
+# appointment-page-20210713
 
 - index: 醫院平板畫面 (輸入面板)
 - info: 確認預約資料
