@@ -9,7 +9,7 @@ $gray: #c4c4c4;
 
 ul,
 li {
-  list-style-type: none; 
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
@@ -54,7 +54,7 @@ li {
 .my-btn-xl {
   display: block;
   margin: 0 auto;
-  width:130px;
+  width: 130px;
   height: 50px;
   text-align: center;
   line-height: 25px;
@@ -69,7 +69,8 @@ li {
 .btn-red {
   color: black;
   background-color: $drvet_orange;
-  &:hover {
+  &:hover,
+  &:active {
     background-color: lighten($drvet_orange, 10%);
     color: black;
   }
@@ -82,7 +83,8 @@ li {
 .btn-red-w {
   color: #efefef;
   background-color: $drvet_orange;
-  &:hover {
+  &:hover,
+  &:active {
     background-color: lighten($drvet_orange, 10%);
     color: #efefef;
   }
@@ -95,7 +97,8 @@ li {
 .btn-gray {
   color: black;
   background-color: $lightgrey;
-  &:hover {
+  &:hover,
+  &:active {
     background-color: lighten($lightgrey, 10%);
     color: black;
   }
@@ -110,7 +113,8 @@ li {
   background-color: $drvet_red;
   border: 1px solid #c4c4c4;
   margin: -1px;
-  &:hover {
+  &:hover,
+  &:active {
     color: $lightgrey;
     background-color: lighten($drvet_red, 10%);
   }
@@ -124,7 +128,8 @@ li {
   color: $drVet_blue;
   background-color: $lightgrey;
   border: 1px solid $drVet_blue;
-  &:hover {
+  &:hover,
+  &:active {
     color: $drVet_blue;
     background-color: lighten($lightgrey, 10%);
   }
@@ -173,6 +178,14 @@ li {
   cursor: pointer;
   &:nth-child(10) {
     background: $drvet_red;
+    &:hover,
+    &:active {
+      background: lighten($drvet_red, 10%);
+    }
+  }
+  &:hover,
+  &:active {
+    background: lighten($drVet_blue, 10%);
   }
 }
 

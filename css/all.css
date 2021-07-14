@@ -60,7 +60,7 @@ li {
   color: black;
   background-color: #f2af44;
 }
-.btn-red:hover {
+.btn-red:hover, .btn-red:active {
   background-color: #f5c374;
   color: black;
 }
@@ -73,7 +73,7 @@ li {
   color: #efefef;
   background-color: #f2af44;
 }
-.btn-red-w:hover {
+.btn-red-w:hover, .btn-red-w:active {
   background-color: #f5c374;
   color: #efefef;
 }
@@ -86,7 +86,7 @@ li {
   color: black;
   background-color: #efefef;
 }
-.btn-gray:hover {
+.btn-gray:hover, .btn-gray:active {
   background-color: white;
   color: black;
 }
@@ -101,7 +101,7 @@ li {
   border: 1px solid #c4c4c4;
   margin: -1px;
 }
-.btn-outline-red:hover {
+.btn-outline-red:hover, .btn-outline-red:active {
   color: #efefef;
   background-color: #d78383;
 }
@@ -115,7 +115,7 @@ li {
   background-color: #efefef;
   border: 1px solid #3e414f;
 }
-.btn-outline-gray:hover {
+.btn-outline-gray:hover, .btn-outline-gray:active {
   color: #3e414f;
   background-color: white;
 }
@@ -162,6 +162,12 @@ li {
 }
 .type-item:nth-child(10) {
   background: #cb5c5c;
+}
+.type-item:nth-child(10):hover, .type-item:nth-child(10):active {
+  background: #d78383;
+}
+.type-item:hover, .type-item:active {
+  background: #54596c;
 }
 
 .info-list li {
