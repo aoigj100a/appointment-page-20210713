@@ -1,42 +1,27 @@
-// 取得按鈕元素 設置待會要用的變數
 const getItems = document.querySelectorAll(".type-item")
-const typeItemList = [...getItems]
-let board = document.querySelector("#board")
-let items = []
+const board = document.querySelector("#board")
 let temp = []
-// 1.綁上id 2.綁上 data-name 3.使用 if 判斷式來做篩選功能 4.綁上事件監聽器
-typeItemList.forEach((odj, index) => {
 
-  items[index] = odj
-  items[index].setAttribute('id', index)
-  items[index].dataset.name = index + 1
-
+getItems.forEach((item, index) => {
+  item.setAttribute('id', index)
   if (index === 9) {
-    items[index].dataset.name = "清空"
-    items[index].addEventListener('click', () => {
-      clearBoard()
-    })
-  } else if (index === 11) {
-    items[index].dataset.name = "退回"
-    items[index].addEventListener('click', () => {
-      backNextText()
-    })
-  } else if (index === 10) {
-    items[index].dataset.name = 0
-    items[index].addEventListener('click', () => {
-      tpyeToBoard(items[index])
-    })
-  } else {
-    items[index].addEventListener('click', () => {
-      tpyeToBoard(items[index])
-    })
-  }
-})
+        item.addEventListener('click', () => {
+          clearBoard()
+        })
+      } else if (index === 11) {
+        item.addEventListener('click', () => {
+          backNextText()
+        })
+      } else {
+        item.addEventListener('click', () => {
+          tpyeToBoard(item)
+        })
+      }
+  })
 function tpyeToBoard(item) {
   temp.push(item.dataset.name)
   board.innerText = temp.join("")
-  console.log(temp)
-  return temp.slice("") 
+  return temp.slice("")
 }
 function backNextText() {
   if (temp.length <= 1 || temp.length === 12) {
@@ -46,7 +31,7 @@ function backNextText() {
   } else {
     temp.pop()
     board.innerText = temp.join("")
-    return temp.slice("") 
+    return temp.slice("")
   }
 }
 function clearBoard() {
@@ -54,3 +39,13 @@ function clearBoard() {
   board.innerText = temp
   return temp = []
 }
+function confirmPhone(phoneNumber) {
+  // 手機、市話、市話加分機
+  const reg = new RegExp(/^(0\d{1,2})-?(\d{6,7})(#\d+)?$/);
+  return reg.test(phoneNumber);
+};
+
+function confirmIdCard(cardNumber) {
+  const reg = new RegExp(/^[a-zA-Z]\d{9}$/);
+  console.log(reg.test(cardNumber))
+};
