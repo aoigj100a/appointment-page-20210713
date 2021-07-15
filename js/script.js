@@ -1,12 +1,10 @@
 // 取得按鈕元素 設置待會要用的變數
 const getItems = document.querySelectorAll(".type-item")
 const typeItemList = [...getItems]
-const typeWrap = document.querySelectorAll("#typeWrap .type-item")
 let board = document.querySelector("#board")
 let items = []
 let temp = []
-
-// 1.綁上id 2.綁上 data-name 3.使用 if 判斷式來做篩選功能
+// 1.綁上id 2.綁上 data-name 3.使用 if 判斷式來做篩選功能 4.綁上事件監聽器
 typeItemList.forEach((odj, index) => {
 
   items[index] = odj
@@ -34,21 +32,25 @@ typeItemList.forEach((odj, index) => {
     })
   }
 })
-
 function tpyeToBoard(item) {
   temp.push(item.dataset.name)
-  board.innerHTML = temp
-  return temp
+  board.innerText = temp.join("")
+  console.log(temp)
+  return temp.slice("") 
 }
-
 function backNextText() {
-  (temp.length === 0) ? temp = "請用畫面鍵盤輸入電話號碼" : temp.pop()
-  board.innerHTML = temp
-  return temp
+  if (temp.length <= 1 || temp.length === 12) {
+    temp = "請用畫面鍵盤輸入電話號碼"
+    board.innerText = temp
+    return temp = []
+  } else {
+    temp.pop()
+    board.innerText = temp.join("")
+    return temp.slice("") 
+  }
 }
-
 function clearBoard() {
-  (board.innerHTML === "請用畫面鍵盤輸入電話號碼") ? temp = [] : temp = "請用畫面鍵盤輸入電話號碼"
-  board.innerHTML = temp
+  temp = "請用畫面鍵盤輸入電話號碼"
+  board.innerText = temp
   return temp = []
 }
