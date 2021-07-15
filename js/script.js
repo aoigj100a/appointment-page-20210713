@@ -1,5 +1,6 @@
 const getItems = document.querySelectorAll(".type-item")
 const board = document.querySelector("#board")
+const confirmBtn = document.querySelector("#confirm")
 let temp = []
 
 getItems.forEach((item, index) => {
@@ -14,11 +15,21 @@ getItems.forEach((item, index) => {
         })
       } else {
         item.addEventListener('click', () => {
-          tpyeToBoard(item)
+          typeToBoard(item)
         })
       }
   })
-function tpyeToBoard(item) {
+
+  confirmBtn.addEventListener("click",()=>{
+    if (confirmPhone(board.innerText)) {
+      alert('ok')
+    }else{
+      alert('不ok')
+      clearBoard()
+    }
+  })
+  
+function typeToBoard(item) {
   temp.push(item.dataset.name)
   board.innerText = temp.join("")
   return temp.slice("")
@@ -44,7 +55,6 @@ function confirmPhone(phoneNumber) {
   const reg = new RegExp(/^(0\d{1,2})-?(\d{6,7})(#\d+)?$/);
   return reg.test(phoneNumber);
 };
-
 function confirmIdCard(cardNumber) {
   const reg = new RegExp(/^[a-zA-Z]\d{9}$/);
   console.log(reg.test(cardNumber))
