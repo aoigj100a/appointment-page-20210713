@@ -35,9 +35,9 @@ li {
   line-height: 20px;
   padding: 10px 20px;
   font-size: 16px;
+  font-weight: bold;
   font-family: "微軟正黑體";
   text-decoration: none;
-  font-weight: bold;
   cursor: pointer;
 }
 
@@ -50,9 +50,9 @@ li {
   line-height: 25px;
   padding: 10px 20px;
   font-size: 24px;
+  font-weight: bold;
   font-family: "微軟正黑體";
   text-decoration: none;
-  font-weight: bold;
   cursor: pointer;
 }
 
@@ -128,20 +128,32 @@ li {
   display: block;
   width: 260px;
   height: 100px;
-  background: url(https://fakeimg.pl/120x60/?retina=1&text=公司logo&font=noto);
+  background: url("https://fakeimg.pl/120x60/?retina=1&text=O診所名稱&font=noto");
   text-indent: 101%;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.phone-box {
+.board-controll {
+  width: 100%;
+}
+.board-controll .board {
   width: 100%;
   color: #c4c4c4;
-  height: 60px;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "微軟正黑體";
   font-weight: 400;
   line-height: 60px;
   letter-spacing: 2px;
   box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.4);
+}
+.board-controll .typing {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "微軟正黑體";
+  color: #3e414f;
 }
 
 .type-wrap {
@@ -157,28 +169,32 @@ li {
   color: #c4c4c4;
   font-size: 36px;
   font-weight: 600;
+  font-family: "微軟正黑體";
   line-height: 85px;
   cursor: pointer;
+  transition: transform 100ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
 }
 .type-item:nth-child(10) {
   background: #cb5c5c;
 }
 .type-item:nth-child(10):hover, .type-item:nth-child(10):active {
-  background: #d78383;
+  background: #b93b3b;
+  transform: scale(1.1, 1.1);
 }
 .type-item:hover, .type-item:active {
-  background: #54596c;
+  background: #282932;
+  transform: scale(1.1, 1.1);
 }
 
-.info-list li {
+.info-list dd {
   color: #3e414f;
   line-height: 16px;
 }
-.info-list li h5 {
+.info-list dd h5 {
   font-weight: 500;
   font-size: 18px;
 }
-.info-list li p {
+.info-list dd p {
   font-size: 16px;
 }
 
@@ -189,6 +205,7 @@ li {
 .title {
   font-size: 36px;
   font-weight: 600;
+  font-family: "微軟正黑體";
   letter-spacing: 16px;
   line-height: 36px;
   width: 280px;

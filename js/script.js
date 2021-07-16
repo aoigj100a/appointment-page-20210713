@@ -27,23 +27,28 @@ getItems.forEach((item, index) => {
       clearBoard()
     }
   })
+
 function typeToBoard(item) {
   temp.push(item.dataset.name)
   board.innerText = temp.join("")
+  board.classList.add("typing")
   return temp.slice("")
 }
 function backNextText() {
-  if (temp.length <= 1 || temp.length === 12) {
+  if (temp.length <= 1 || temp === "請用畫面鍵盤輸入電話號碼") {
+    board.classList.remove("typing")
     temp = "請用畫面鍵盤輸入電話號碼"
     board.innerText = temp
     return temp = []
   } else {
+    board.classList.add("typing")
     temp.pop()
     board.innerText = temp.join("")
     return temp.slice("")
   }
 }
 function clearBoard() {
+  board.classList.remove("typing")
   temp = "請用畫面鍵盤輸入電話號碼"
   board.innerText = temp
   return temp = []

@@ -5,8 +5,60 @@ $drVet_blue: #3e414f;
 $lightgrey: #efefef;
 $gray: #c4c4c4;
 
-// reset
+// 斷點
+$mobile-small: 240px; 
+$mobile-large: 320px; 
+$tablet-small: 480px; 
+$tablet-large: 768px; 
+$screen-small: 1024px; 
+$screen-large: 1280px;
 
+// mixin
+// Break Point斷點
+@mixin RWD($breakPoint) {
+  @media (min-width: $breakPoint) {
+    @content;
+  }
+};
+
+@mixin font-setting($size, $weight, $family) {
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $family;
+  
+};
+
+@mixin tomato-border {
+  border: 0.5px dashed tomato;
+};
+
+@mixin container-direction($direction) {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  @if $direction == center {
+    justify-content: center;
+  } @else if $direction == right {
+    justify-content: flex-start;
+  } @else if $direction == left {
+    justify-content: flex-end;
+  } @else {
+    @error "Unknown direction #{$direction}.";
+  }
+};
+
+@mixin img-replace-text($width,$height,$url){
+  display: block;
+  width: $width;
+  height: $height;
+  background: url($url);
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+};
+
+// reset
 ul,
 li {
   list-style-type: none;
@@ -15,7 +67,6 @@ li {
 }
 
 // 共用class
-
 .bg-gray {
   background: $drVet_blue;
   color: $lightgrey;
@@ -44,10 +95,8 @@ li {
   text-align: center;
   line-height: 20px;
   padding: 10px 20px;
-  font-size: 16px;
-  font-family: "微軟正黑體";
+  @include font-setting(16px, bold, "微軟正黑體");
   text-decoration: none;
-  font-weight: bold;
   cursor: pointer;
 }
 
@@ -59,10 +108,8 @@ li {
   text-align: center;
   line-height: 25px;
   padding: 10px 20px;
-  font-size: 24px;
-  font-family: "微軟正黑體";
+  @include font-setting(24px, bold, "微軟正黑體");
   text-decoration: none;
-  font-weight: bold;
   cursor: pointer;
 }
 
@@ -141,27 +188,28 @@ li {
 
 // 圖片取代文字
 .logo a {
-  display: block;
-  width: 260px;
-  height: 100px;
-  background: url(https://fakeimg.pl/120x60/?retina=1&text=公司logo&font=noto);
-  text-indent: 101%;
-  white-space: nowrap;
-  overflow: hidden;
+  @include img-replace-text(260px,100px ,"https://fakeimg.pl/120x60/?retina=1&text=O診所名稱&font=noto");
 }
 
 // 客製化
 
-.phone-box {
+.board-controll {
   width: 100%;
-  color: $gray;
-  height: 60px;
-  font-weight: 400;
-  line-height: 60px;
-  letter-spacing: 2px;
-  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.4);
+  .board {
+    width: 100%;
+    color: $gray;
+    height: 100%;
+    @include font-setting(16px, 400, "微軟正黑體");
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 2px;
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.4);
+  }
+  .typing {
+    @include font-setting(24px, 600, "微軟正黑體");
+    color: $drVet_blue;
+  }
 }
-
 .type-wrap {
   display: grid;
   justify-content: center;
@@ -172,24 +220,26 @@ li {
 .type-item {
   background: $drVet_blue;
   color: $gray;
-  font-size: 36px;
-  font-weight: 600;
+  @include font-setting(36px, 600, "微軟正黑體");
   line-height: 85px;
   cursor: pointer;
+  transition: transform 100ms cubic-bezier(0.25, 0.25, 0.75, 0.75); 
   &:nth-child(10) {
     background: $drvet_red;
     &:hover,
     &:active {
-      background: lighten($drvet_red, 10%);
+      background: darken($drvet_red, 10%);
+      transform: scale(1.1, 1.1);
     }
   }
   &:hover,
   &:active {
-    background: lighten($drVet_blue, 10%);
+    background: darken($drVet_blue, 10%);
+    transform: scale(1.1, 1.1);
   }
 }
 
-.info-list li {
+.info-list dd {
   color: $drVet_blue;
   line-height: 16px;
   h5 {
@@ -206,8 +256,7 @@ li {
 }
 
 .title {
-  font-size: 36px;
-  font-weight: 600;
+  @include font-setting(36px, 600, "微軟正黑體");
   letter-spacing: 16px;
   line-height: 36px;
   width: 280px;
