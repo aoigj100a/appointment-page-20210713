@@ -19,7 +19,6 @@ getItems.forEach((item, index) => {
         })
       }
   })
-
   confirmBtn.addEventListener("click",()=>{
     if (confirmPhone(board.innerText)) {
       alert('ok')
@@ -28,7 +27,6 @@ getItems.forEach((item, index) => {
       clearBoard()
     }
   })
-  
 function typeToBoard(item) {
   temp.push(item.dataset.name)
   board.innerText = temp.join("")
