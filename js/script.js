@@ -21,9 +21,22 @@ getItems.forEach((item, index) => {
 })
 confirmBtn.addEventListener("click", () => {
   if (confirmPhone(board.innerText)) {
-    alert('手機認證通過')
+    Swal.fire({
+      title: "成功",
+      text: "手機認證通過",
+      icon: 'success',
+      confirmButtonText: '知道了'
+    })
+    location.replace("https://aoigj100a.github.io/appointment-page-20210713/info")
   } else {
-    alert(`${board.innerText}不是一個合法的電話號碼！`)
+    let msg
+    (board.innerText === "請用畫面鍵盤輸入電話號碼") ? msg = "這" : msg = board.innerText
+    Swal.fire({
+      title: '錯誤！',
+      text: `${msg}不是一個合法的電話號碼！`,
+      icon: 'error',
+      confirmButtonText: '知道了'
+    })
     clearBoard()
   }
 })
@@ -35,7 +48,12 @@ function typeToBoard(item) {
     board.classList.add("typing")
     return temp.slice("")
   } else {
-    alert('不能超過10個碼喔！')
+    Swal.fire({
+      title: '錯誤！',
+      text: "不能超過10個號碼喔！",
+      icon: 'error',
+      confirmButtonText: '知道了'
+    })
   }
 
 }
