@@ -6,11 +6,11 @@ $lightgrey: #efefef;
 $gray: #c4c4c4;
 
 // 斷點
-$mobile-small: 240px; 
-$mobile-large: 320px; 
-$tablet-small: 480px; 
-$tablet-large: 768px; 
-$screen-small: 1024px; 
+$mobile-small: 240px;
+$mobile-large: 320px;
+$tablet-small: 480px;
+$tablet-large: 768px;
+$screen-small: 1024px;
 $screen-large: 1280px;
 
 // mixin
@@ -19,18 +19,17 @@ $screen-large: 1280px;
   @media (min-width: $breakPoint) {
     @content;
   }
-};
+}
 
 @mixin font-setting($size, $weight, $family) {
   font-size: $size;
   font-weight: $weight;
   font-family: $family;
-  
-};
+}
 
 @mixin tomato-border {
   border: 0.5px dashed tomato;
-};
+}
 
 @mixin container-direction($direction) {
   display: flex;
@@ -46,9 +45,9 @@ $screen-large: 1280px;
   } @else {
     @error "Unknown direction #{$direction}.";
   }
-};
+}
 
-@mixin img-replace-text($width,$height,$url){
+@mixin img-replace-text($width, $height, $url) {
   display: block;
   width: $width;
   height: $height;
@@ -56,7 +55,7 @@ $screen-large: 1280px;
   text-indent: 101%;
   white-space: nowrap;
   overflow: hidden;
-};
+}
 
 // reset
 ul,
@@ -67,6 +66,13 @@ li {
 }
 
 // 共用class
+* {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */      
+}
+
 .bg-gray {
   background: $drVet_blue;
   color: $lightgrey;
@@ -188,7 +194,7 @@ li {
 
 // 圖片取代文字
 .logo a {
-  @include img-replace-text(260px,100px ,"https://fakeimg.pl/120x60/?retina=1&text=O診所名稱&font=noto");
+  @include img-replace-text(260px, 100px, "https://fakeimg.pl/120x60/?retina=1&text=O診所名稱&font=noto");
 }
 
 // 客製化
@@ -223,7 +229,7 @@ li {
   @include font-setting(36px, 600, "微軟正黑體");
   line-height: 85px;
   cursor: pointer;
-  transition: transform 100ms cubic-bezier(0.25, 0.25, 0.75, 0.75); 
+  transition: transform 100ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
   &:nth-child(10) {
     background: $drvet_red;
     &:hover,
