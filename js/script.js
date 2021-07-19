@@ -19,9 +19,9 @@ getItems.forEach((item, index) => {
     })
   }
 })
-confirmBtn.addEventListener("click", () => {
+confirmBtn.addEventListener("click", async() => {
   if (confirmPhone(board.innerText)) {
-    Swal.fire({
+    await Swal.fire({
       title: "成功",
       text: "手機認證通過",
       icon: 'success',
