@@ -6,6 +6,17 @@ li {
   padding: 0;
 }
 
+* {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}
+
 .bg-gray {
   background: #3e414f;
   color: #efefef;
@@ -191,15 +202,21 @@ li {
   line-height: 16px;
 }
 .info-list dd h5 {
-  font-weight: 500;
   font-size: 18px;
+  font-weight: 500;
+  font-family: "微軟正黑體";
 }
 .info-list dd p {
   font-size: 16px;
+  font-weight: 400;
+  font-family: "微軟正黑體";
 }
 
 .note p {
-  color: #c4c4c4;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "微軟正黑體";
+  color: #cb5c5c;
 }
 
 .title {

@@ -67,10 +67,10 @@ li {
 
 // 共用class
 * {
-  -webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none;          /* Likely future */      
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
 }
 
 .bg-gray {
@@ -249,16 +249,16 @@ li {
   color: $drVet_blue;
   line-height: 16px;
   h5 {
-    font-weight: 500;
-    font-size: 18px;
+    @include font-setting(18px, 500, "微軟正黑體");
   }
   p {
-    font-size: 16px;
+    @include font-setting(16px, 400, "微軟正黑體");
   }
 }
 
 .note p {
-  color: $gray;
+  @include font-setting(18px, 600, "微軟正黑體");
+  color: $drvet_red;
 }
 
 .title {
