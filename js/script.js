@@ -19,14 +19,8 @@ getItems.forEach((item, index) => {
     })
   }
 })
-confirmBtn.addEventListener("click", async() => {
+confirmBtn.addEventListener("click", () => {
   if (confirmPhone(board.innerText)) {
-    await Swal.fire({
-      title: "成功",
-      text: "手機認證通過",
-      icon: 'success',
-      confirmButtonText: '知道了'
-    })
     location.replace("https://aoigj100a.github.io/appointment-page-20210713/info")
   } else {
     let msg
