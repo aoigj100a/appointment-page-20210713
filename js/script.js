@@ -48,6 +48,7 @@ function typeToBoard(item) {
       icon: 'error',
       confirmButtonText: '知道了'
     })
+    clearBoard()
   }
 
 }
