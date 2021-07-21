@@ -36,7 +36,7 @@ confirmBtn.addEventListener("click", () => {
 })
 
 function typeToBoard(item) {
-  if (temp.length < 9) {
+  if (temp.length < 10) {
     temp.push(item.dataset.name)
     board.innerText = temp.join("")
     board.classList.add("typing")
