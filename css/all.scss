@@ -194,7 +194,7 @@ li {
 
 // 圖片取代文字
 .logo a {
-  @include img-replace-text(260px, 100px, "https://fakeimg.pl/120x60/?retina=1&text=O診所名稱&font=noto");
+  @include img-replace-text(35px, 35px, "https://fakeimg.pl/35x35/?retina=1&text=O&font=noto");
 }
 
 // 客製化

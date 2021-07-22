@@ -137,9 +137,9 @@ li {
 
 .logo a {
   display: block;
-  width: 260px;
-  height: 100px;
-  background: url("https://fakeimg.pl/120x60/?retina=1&text=O診所名稱&font=noto");
+  width: 35px;
+  height: 35px;
+  background: url("https://fakeimg.pl/35x35/?retina=1&text=O&font=noto");
   text-indent: 101%;
   white-space: nowrap;
   overflow: hidden;
